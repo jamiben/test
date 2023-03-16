@@ -1,14 +1,14 @@
 <h1>Login</h1>
 <form id="form">
-  <div class="contentInp">
-    <label for="username">Name:</label>
-    <input type="text" id="username" placeholder="Charles" [(ngModel)]="userName">
-  </div>
-  <div class="contentInp">
-    <label for="password">Password:</label>
-    <input type="password" id="password" placeholder="password" [(ngModel)]="password">
-  </div>
+    <div class="contentInp">
+        <label for="username">Name:</label>
+        <input type="text" id="userName" placeholder="Charles" name="userName" [(ngModel)]='user.username' >
+    </div>
+    <div class="contentInp">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="password" name="password" [(ngModel)]="user.password" >
+    </div>
 
-  <button type="submit" (click)="login()">Log In</button>
-<p id="errorP" *ngIf="wrongCredentials">Invalid credential pleas try again</p>
+    <button type="submit" (click)="login()">Log In</button>
+    <p id="errorP" *ngIf="wrongCredentials">Invalid credential pleas try again</p>
 </form>
